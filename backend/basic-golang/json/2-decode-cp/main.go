@@ -5,10 +5,21 @@ import "encoding/json"
 // Dari contoh yang telah diberikan, cobalah untuk melakukan decode dari json menjadi objek dari struct.
 // Mengambil kasus pada encode, lengkapi function DecodeToLeaderboard agar json dapat di decode menjadi objek Leaderboard
 
+<<<<<<< HEAD
 type UserRank struct {
 	Name  string
 	Email string `json:"-"`
 	Rank  int
+=======
+// type UserRank struct {
+// 	Name  string
+// 	Email string
+// 	Rank  int
+// }
+
+type UserRank struct {
+	// TODO: answer here
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 type Leaderboard struct {
@@ -17,6 +28,7 @@ type Leaderboard struct {
 
 func DecodeToLeaderboard(jsonData []byte) (Leaderboard, error) {
 	// TODO: answer here
+<<<<<<< HEAD
 	// inisiasi leaderboard
 	var leaderboard Leaderboard
 
@@ -65,3 +77,6 @@ func main() {
 	DecodeToLeaderboard(jsonData)
 
 }
+=======
+}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+<<<<<<< HEAD
 )
 
 // TODO: answer here
@@ -32,11 +33,49 @@ func (r Ruang) EncodeJSON() string {
 	// convert to string
 	return string(data)
 
+=======
+	"log"
+)
+
+// buat JSON string array nested seperti berikut
+/*
+{
+	"ruangTamu": {
+			"items": [
+					{
+							"nama": "Meja",
+							"jumlah": 20,
+							"warna": "Coklat",
+							"ukuran": {
+									"panjang": "50 cm",
+									"tinggi": "25 cm"
+							}
+					},
+					{
+							"nama": "Kursi",
+							"jumlah": 1,
+							"warna": "Hitam",
+							"ukuran": {
+									"panjang": "70 cm",
+									"tinggi": "30 cm"
+							}
+					}
+			]
+	}
+}
+*/
+
+// TODO: answer here
+
+func (r Ruang) EncodeJSON() string {
+	// TODO: answer here
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func NewRuang(r Ruang) Ruang {
 	return r
 }
+<<<<<<< HEAD
 
 func main() {
 
@@ -79,3 +118,5 @@ func main() {
 	// print
 	println(encode)
 }
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

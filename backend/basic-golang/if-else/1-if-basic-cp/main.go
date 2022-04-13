@@ -37,6 +37,7 @@ func main() {
 		Indra Kenz   Tidak Lulus
 	*/
 	// TODO: answer here
+<<<<<<< HEAD
 	for _, val := range mahasiswa {
 		fmt.Println(val["name"], " ", val["nilai"])
 		x := val["nilai"]
@@ -52,4 +53,6 @@ func main() {
 	
 	}
 	
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

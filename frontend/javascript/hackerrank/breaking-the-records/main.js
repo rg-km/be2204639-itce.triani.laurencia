@@ -14,7 +14,27 @@
 
 function breakingRecords(scores) {
   // Write your code here
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  //beginanswer
+  let highestScore = scores[0];
+  let lowestScore = scores[0];
+  let arr = [0, 0];
+  scores.forEach(score => {
+      if (highestScore < score) {
+          highestScore = score;
+          arr[0] = arr[0]+1;
+      }
+      if (lowestScore > score) {
+          lowestScore = score;
+          arr[1] = arr[1]+1;
+      }
+  });
+
+  return arr
+  //endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 function main() {

@@ -7,7 +7,11 @@ import (
 )
 
 type CartItemRepository struct {
+<<<<<<< HEAD
 	db db.DB // konektornya dari si db
+=======
+	db db.DB
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func NewCartItemRepository(db db.DB) CartItemRepository {
@@ -65,16 +69,25 @@ func (u *CartItemRepository) Save(cartItems []CartItem) error {
 }
 
 func (u *CartItemRepository) SelectAll() ([]CartItem, error) {
+<<<<<<< HEAD
 	//return []CartItem{}, nil
 	return u.LoadOrCreate()
 }
 
 func (u *CartItemRepository) Add(product Product) error {
 	carts, err := u.LoadOrCreate()
+=======
+	return []CartItem{}, nil // TODO: replace this
+}
+
+func (u *CartItemRepository) Add(product Product) error {
+	cartItems, err := u.LoadOrCreate()
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	if err != nil {
 		return err
 	}
 
+<<<<<<< HEAD
 	for i := 0; i < len(carts); i++ {
 		if carts[i].ProductName == product.ProductName {
 			carts[i].Quantity++
@@ -131,3 +144,15 @@ func (u *CartItemRepository) TotalPrice() (int, error) {
 
 	return totalPrice, nil
 }
+=======
+	return nil // TODO: replace this
+}
+
+func (u *CartItemRepository) ResetCartItems() error {
+	return nil // TODO: replace this
+}
+
+func (u *CartItemRepository) TotalPrice() (int, error) {
+	return 0, nil // TODO: replace this
+}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

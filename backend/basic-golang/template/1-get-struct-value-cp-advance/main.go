@@ -3,8 +3,13 @@ package main
 import (
 	"bytes"
 	"fmt"
+<<<<<<< HEAD
 	"html/template"
 	"log"
+=======
+	"log"
+	"text/template"
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 )
 
 //Buat function untuk menghitung average score siswa
@@ -17,6 +22,7 @@ type Student struct {
 
 func (s Student) CalculateScore(scores []float64) float64 {
 	// TODO: answer here
+<<<<<<< HEAD
 	sum := 0.0
 	for _, score := range scores {
 		sum += score
@@ -24,11 +30,14 @@ func (s Student) CalculateScore(scores []float64) float64 {
 
 	return sum / float64(len(scores))
 
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func (s Student) GenerateStudentTemplate() string {
 	buff := new(bytes.Buffer)
 	// TODO: answer here
+<<<<<<< HEAD
 
 	// register function calculateScore
 	avg := template.FuncMap{
@@ -43,6 +52,8 @@ func (s Student) GenerateStudentTemplate() string {
 		log.Fatalf("execute template error: %s", err.Error())
 	}
 
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	return buff.String()
 }
 

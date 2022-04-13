@@ -10,7 +10,20 @@
 // teks3 dibalik sama menjadi kasur ini rusak, maka balikan akan true
 
 function checkPalindrome(string) {
+<<<<<<< HEAD
     // TODO: answer here
+=======
+    // beginanswer
+    const len = string.length;
+
+    for (let i = 0; i < len / 2; i++) {
+        if (string[i] !== string[len - 1 - i]) {
+            return 'Bukan palindrom';
+        }
+    }
+    return 'Palindrom';
+    // endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 // masukan teks

@@ -14,6 +14,9 @@ func main() {
 		7, 15, 85, 19, 20, 61, 24, 56, 51,
 	}
 	// TODO: answer here
+<<<<<<< HEAD
 	fmt.Println(len(array))
 	fmt.Println(array[len(array)])
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

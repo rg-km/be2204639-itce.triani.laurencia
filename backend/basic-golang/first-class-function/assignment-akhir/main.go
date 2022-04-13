@@ -8,11 +8,15 @@ import "fmt"
 // fungsi ini merupakan closure
 func points(base int) func(x int) int {
 		// TODO: answer here
+<<<<<<< HEAD
 		return func(x int) int {
 			x=x+base
 			return x
 		}
 		
+=======
+	}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func main() {

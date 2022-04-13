@@ -20,7 +20,21 @@ function getMonthName(monthNumber) {
     }
   }
   
+<<<<<<< HEAD
   // TODO: answer here
     let myMonth = parseInt(prompt("Masukan bilangan: "));
     getMonthName(myMonth);
   // TODO: answer here
+=======
+  //beginanswer
+  try {
+  //endanswer
+    let myMonth = parseInt(prompt("Masukan bilangan: "));
+    getMonthName(myMonth);
+  //beginanswer
+  }
+  catch (e) {
+    console.log(e.message);
+  }
+  //endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

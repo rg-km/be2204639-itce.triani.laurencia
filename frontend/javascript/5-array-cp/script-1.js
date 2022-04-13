@@ -15,6 +15,31 @@ let arr = numInput.split(" ").map(Number);
 // jika tidak ada elemen dalam array, jika semua bilangan negatif, dapat mengembalikan nilai 0
 let maxSum = 0; 
 
+<<<<<<< HEAD
 // TODO: answer here
+=======
+// beginanswer
+// solusi 1
+for (let i = 0; i < arr.length; i++) {
+    let sumFixedStart = 0;
+    for (let j = i; j < arr.length; j++) {
+        sumFixedStart += arr[j];
+        maxSum = Math.max(maxSum, sumFixedStart);
+    }
+}
+
+// solusi 2
+let partialSum = 0;
+
+for (let item of arr) { // for each item of arr
+    partialSum += item; // add it to partialSum
+    maxSum = Math.max(maxSum, partialSum); // remember the maximum
+    
+    if (partialSum < 0) 
+        partialSum = 0; // zero if negative
+}
+
+// endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 
 console.log(maxSum);

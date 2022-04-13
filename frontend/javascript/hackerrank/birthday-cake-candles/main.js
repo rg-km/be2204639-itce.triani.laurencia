@@ -13,7 +13,20 @@
 
 function birthdayCakeCandles(candles) {
   // Write your code here
+<<<<<<< HEAD
 	// TODO: answer here
+=======
+	//beginanswer
+  var blownOut = 0;
+  var tallest = Math.max.apply(null, candles)
+  
+  for (var i = 0; i < candles.length; i++) {
+      if (candles[i] == tallest) blownOut++;
+  }
+
+  return blownOut;
+	//endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 function main() {

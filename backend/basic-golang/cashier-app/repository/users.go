@@ -1,7 +1,12 @@
 package repository
 
 import (
+<<<<<<< HEAD
 	"errors"
+=======
+	"fmt"
+	"strconv"
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 
 	"github.com/ruang-guru/playground/backend/basic-golang/cashier-app/db"
 )
@@ -15,6 +20,7 @@ func NewUserRepository(db db.DB) UserRepository {
 }
 
 func (u *UserRepository) LoadOrCreate() ([]User, error) {
+<<<<<<< HEAD
 	// tujuannya untuk membuka data dari db atau create filenya
 	// TODO: replace this
 	data, err := u.db.Load("users")
@@ -137,6 +143,29 @@ func (u *UserRepository) Save(users []User) error {
 	}
 
 	return u.db.Save("users", record)
+=======
+	return []User{}, nil // TODO: replace this
+}
+
+func (u *UserRepository) SelectAll() ([]User, error) {
+	return []User{}, nil // TODO: replace this
+}
+
+func (u UserRepository) Login(username string, password string) (*string, error) {
+	return nil, nil // TODO: replace this
+}
+
+func (u *UserRepository) FindLoggedinUser() (*string, error) {
+	return nil, nil // TODO: replace this
+}
+
+func (u *UserRepository) Logout(username string) error {
+	return nil // TODO: replace this
+}
+
+func (u *UserRepository) Save(users []User) error {
+	return nil // TODO: replace this
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func (u *UserRepository) changeStatus(username string, status bool) error {
@@ -145,6 +174,7 @@ func (u *UserRepository) changeStatus(username string, status bool) error {
 		return err
 	}
 
+<<<<<<< HEAD
 	// error disini
 	for i := 0; i < len(users); i++ {
 		if users[i].Username == username {
@@ -183,3 +213,11 @@ func (u *UserRepository) LogoutAll() error {
 
 	return nil
 }
+=======
+	return nil // TODO: replace this
+}
+
+func (u *UserRepository) LogoutAll() error {
+	return nil // TODO: replace this
+}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

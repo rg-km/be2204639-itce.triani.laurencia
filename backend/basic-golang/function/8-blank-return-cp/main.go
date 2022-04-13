@@ -12,8 +12,11 @@ func main() {
 }
 
 // TODO: answer here
+<<<<<<< HEAD
 func square(angka1, angka2 int) (result1,result2 int) {
 	result1 = angka1 * angka1
 	result2 = angka2 * angka2
 	return 
 }
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

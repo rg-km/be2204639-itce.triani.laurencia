@@ -1,10 +1,14 @@
 package main
 
+<<<<<<< HEAD
 import (
 	"fmt"
 
 	// "golang.org/x/text/width"
 )
+=======
+import "fmt"
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 
 //buat struct Rectangle dengan dua atribut yaitu Width dan Length
 // tambah dua method :
@@ -13,6 +17,7 @@ import (
 // SetWidthValue(width int) untuk mengubah width dengan value
 
 // TODO: answer here
+<<<<<<< HEAD
 type Rectangle struct {
 	width int
 	Length int
@@ -32,4 +37,16 @@ func main() {
 	r.SetWidthPointer(30)
 	fmt.Println("sesudah melakukan set width dengan pointer", r.width)
 	r.SetWidthValue(70)
+=======
+func main() {
+	var r Rectangle
+	r.Width = 10
+	r.Length = 20
+
+	fmt.Println("sebelum melakukan set width dengan pointer", r.Width)
+	r.SetWidthPointer(30)
+	fmt.Println("sesudah melakukan set width dengan pointer", r.Width)
+	r.SetWidthValue(70)
+	fmt.Println("sesudah melakukan set width dengan value", r.Width)
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

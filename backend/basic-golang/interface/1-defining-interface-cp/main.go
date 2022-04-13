@@ -12,6 +12,7 @@ import "fmt"
 // Bonus untuk JuniorEngineer adalah 1 * BaseSalary
 
 // TODO: answer here
+<<<<<<< HEAD
 type Employee interface {
 	GetBonus() int // kumpulan method
 }
@@ -41,21 +42,27 @@ type JuniorEngineer struct {
 func (s JuniorEngineer) GetBonus() int {
 	return s.BaseSalary
 }
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 
 func TotalEmployeeBonus(employees []Employee) int {
 	// Hitunglah total bonus yang dikeluarkan dari list of Employee
 	// TODO: answer here
+<<<<<<< HEAD
 	total := 0
 	for _, value := range employees {
 		total += value.GetBonus()
 	}
 
 	return total
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func main() {
 	// Buatlah objek konkret untuk masing-masing objek dan panggil function TotalEmployeeBonus. Print total bonus untuk semua employee.
 	// TODO: answer here
+<<<<<<< HEAD
 	manager := Manager{
 		BaseSalary: 20000000,
 	}
@@ -68,4 +75,6 @@ func main() {
 
 	totalBonus := TotalEmployeeBonus([]Employee{manager, seniorEngineer, juniorEngineer})
 	fmt.Println("total bonus", totalBonus)
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

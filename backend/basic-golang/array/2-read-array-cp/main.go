@@ -7,6 +7,9 @@ import "fmt"
 // Outputkan hasilnya ya
 func main() {
 	// TODO: answer here
+<<<<<<< HEAD
 	array := [2] string {"ikhsan","maulana"}
 	fmt.Println(array)
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

@@ -35,7 +35,11 @@ var _ = Describe("Account", func() {
 		leaderboardObject = Leaderboard{
 			Users: users,
 		}
+<<<<<<< HEAD
 		expectedOutput = `Peringkat ke-1: Roger Peringkat ke-2: Tony Peringkat ke-3: Bruce Peringkat ke-4: Natasha Peringkat ke-5: Clint `
+=======
+		expectedOutput = `Peringkat ke-1: RogerPeringkat ke-2: TonyPeringkat ke-3: BrucePeringkat ke-4: NatashaPeringkat ke-5: Clint`
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	})
 	Describe("ExecuteToByteBuffer", func() {
 		It("returns slice of bytes with correct wording", func() {

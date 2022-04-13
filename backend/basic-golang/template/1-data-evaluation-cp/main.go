@@ -2,7 +2,10 @@ package main
 
 import (
 	"bytes"
+<<<<<<< HEAD
 	"fmt"
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	"html/template"
 )
 
@@ -21,6 +24,7 @@ type Account struct {
 }
 
 func ExecuteToByteBuffer(account Account) ([]byte, error) {
+<<<<<<< HEAD
 	// siapkan kalimat yang akan dicetak
 	textTemplate := "Akun {{.Name}} dengan Nomor {{.Number}} memiliki saldo sebesar ${{.Balance}}."
 
@@ -60,4 +64,8 @@ func main() {
 	}
 	// menampilkan hasil dengan convert ke string
 	fmt.Println(string(b))
+=======
+	var textTemplate string
+	// TODO: answer here
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

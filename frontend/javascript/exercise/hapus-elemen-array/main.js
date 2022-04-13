@@ -14,5 +14,18 @@
 
 var removeElement = function(nums, val) {
   // Tulis kode di sini
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  // beginanswer
+  let i = 0;
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] !== val) {
+      nums[i] = nums[j];
+      i++;
+    }
+  }
+  return i;
+  // endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 };

@@ -15,6 +15,7 @@ import "fmt"
 func main() {
 	for i := 1; i <= 100; i++ {
 		// TODO: answer here
+<<<<<<< HEAD
 		if i % 3 == 0{
 			fmt.Println(i,"fizz")
 			
@@ -27,5 +28,7 @@ func main() {
 		}
 		fmt.Println(i)
 	
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	}
 }

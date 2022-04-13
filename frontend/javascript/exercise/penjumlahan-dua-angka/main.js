@@ -19,5 +19,21 @@
 
 function twoSum(nums, target) {
   // Tulis kode di sini
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  // beginanswer
+  const map = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    const another = target - nums[i];
+  
+    if (another in map) {
+      return [map[another], i];
+    }    
+    map[nums[i]] = i;
+  }
+  return null;
+  // endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 };

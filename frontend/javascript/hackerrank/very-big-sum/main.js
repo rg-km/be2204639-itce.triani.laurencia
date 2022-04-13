@@ -13,7 +13,17 @@
 
 function aVeryBigSum(ar) {
   // Complete this function
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  //beginanswer
+  let sum = 0;
+    for (var i = 0; i < ar.length; i++) {
+        sum += ar[i];
+    }
+    return sum;
+  //endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 function main() {

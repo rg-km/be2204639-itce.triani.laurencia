@@ -11,6 +11,9 @@ func main() {
 }
 
 // TODO: answer here
+<<<<<<< HEAD
 func goodAfternoon(name1, name2 string) {
 	fmt.Printf("good afternoon %s dari %s\n", name1, name2)
 }
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

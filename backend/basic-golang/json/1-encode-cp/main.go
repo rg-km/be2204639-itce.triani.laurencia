@@ -6,10 +6,21 @@ import "encoding/json"
 // Lengkapi function EncodeToJson agar dapat mengembalikan nilai byte hasil dari encode objek Leaderboard.
 // Modifikasi struct UserRank sehingga field Name menjadi name ,field Rank menjadi rank, dan field Email tidak ikut untuk diencode.
 
+<<<<<<< HEAD
 type UserRank struct {
 	Name  string `json:"name"`
 	Email string `json:"-"`
 	Rank  int    `json:"rank"`
+=======
+// type UserRank struct {
+// 	Name  string
+// 	Email string
+// 	Rank  int
+// }
+
+type UserRank struct {
+	// TODO: answer here
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 type Leaderboard struct {
@@ -18,6 +29,7 @@ type Leaderboard struct {
 
 func EncodeToJson(leaderboard Leaderboard) ([]byte, error) {
 	// TODO: answer here
+<<<<<<< HEAD
 	data, err := json.Marshal(leaderboard)
 	return data, err
 }
@@ -70,3 +82,6 @@ func main() {
 	println(string(data))
 
 }
+=======
+}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

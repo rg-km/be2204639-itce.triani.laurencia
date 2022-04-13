@@ -7,7 +7,32 @@
 
 let calculator = {
   // Tulis kode di sini
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  // beginanswer
+  sum() {
+    return this.a + this.b;
+  },
+
+  substract() {
+    return this.a - this.b;
+  },
+
+  multiply() {
+    return this.a * this.b;
+  },
+
+  division() {
+    return this.a / this.b;
+  },
+
+  read() {
+    this.a = +prompt('a =', 0);
+    this.b = +prompt('b =', 0);
+  }
+  // endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 };
   
 calculator.read();

@@ -1,8 +1,13 @@
 package api
 
 import (
+<<<<<<< HEAD
 	"fmt"
 	"encoding/json"
+=======
+	"encoding/json"
+	"fmt"
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	"net/http"
 )
 
@@ -39,6 +44,7 @@ func (api *API) productList(w http.ResponseWriter, req *http.Request) {
 	}
 
 	fmt.Println(products)
+<<<<<<< HEAD
 	for _, Barang := range products{
 		response.Products = append(response.Products, Product{
 			Name: Barang.ProductName,
@@ -50,3 +56,8 @@ func (api *API) productList(w http.ResponseWriter, req *http.Request) {
 	// TODO: replace this
 
 }
+=======
+
+	encoder.Encode(ProductListSuccessResponse{Products: []Product{}}) // TODO: replace this
+}
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c

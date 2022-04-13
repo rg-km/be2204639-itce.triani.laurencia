@@ -7,7 +7,24 @@
  */
 
 function angkaPalindrome(num) {
+<<<<<<< HEAD
   // TODO: answer here
+=======
+  //beginanswer
+  var cek = true;
+  while (cek) {
+    num++;
+    var numStr = num.toString();
+    var hasil = '';
+    for (var j = numStr.length - 1; j >= 0; j--) {
+      hasil += numStr[j];
+    }
+    if (hasil === numStr) {
+      return num;
+    }
+  }
+  //endanswer
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 console.log(angkaPalindrome(10)); //11

@@ -14,6 +14,7 @@ func main() {
 		"Aurelius", "is", "also", "known", "to", "be", "a", "philosopher"}
 
 	// TODO: answer here
+<<<<<<< HEAD
 	var slice2 []string
 
 	slice2 = append(slice2,slice... )
@@ -22,4 +23,6 @@ func main() {
 	s0[6] = "philosopher"
 	fmt.Println(slice2)
 	fmt.Println(s0)
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

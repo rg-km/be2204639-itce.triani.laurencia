@@ -8,8 +8,11 @@ func main() {
 	//maka fungsi akan mengembalikan 9
 
 	// TODO: answer here
+<<<<<<< HEAD
 	square := func (x int) int {
 		return x*x
 	}(3)
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	fmt.Println(square)
 }

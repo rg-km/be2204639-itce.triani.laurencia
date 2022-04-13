@@ -2,7 +2,10 @@ package main
 
 import (
 	"bytes"
+<<<<<<< HEAD
 	"fmt"
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 	"html/template"
 )
 
@@ -22,6 +25,7 @@ type Leaderboard struct {
 }
 
 func ExecuteToByteBuffer(leaderboard Leaderboard) ([]byte, error) {
+<<<<<<< HEAD
 
 	// bikin kalimat di dalam looping
 	// range looping berfungsi untuk mengambil data dari slice
@@ -86,4 +90,8 @@ func main() {
 	// cetak output
 	fmt.Println(string(b))
 
+=======
+	var textTemplate string
+	// TODO: answer here
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

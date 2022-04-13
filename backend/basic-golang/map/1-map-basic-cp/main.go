@@ -6,6 +6,7 @@ import "fmt"
 // Output satu semua key dan value yang ada di map tersebut
 func main() {
 	// TODO: answer here
+<<<<<<< HEAD
 	nama := map [string] string {
 		"jawabarat": "bandung",
 		"dkijakarta": "jakarta",
@@ -14,4 +15,6 @@ func main() {
 	for key, value := range nama {
 		fmt.Println("nama provinsi: ", key, " ibukota: ", value)
 	}
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }

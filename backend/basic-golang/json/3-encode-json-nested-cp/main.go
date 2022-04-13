@@ -1,6 +1,13 @@
 package main
 
+<<<<<<< HEAD
 import "encoding/json"
+=======
+import (
+	"encoding/json"
+	"log"
+)
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 
 // Dari contoh sebelumnya
 // buat JSON string array nested seperti berikut
@@ -29,16 +36,22 @@ import "encoding/json"
 
 type Ukuran struct {
 	// TODO: answer here
+<<<<<<< HEAD
 	Panjang string `json:"panjang"`
 	Tinggi  string `json:"tinggi"`
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 type Meja struct {
 	// TODO: answer here
+<<<<<<< HEAD
 	Jenis  string `json:"jenis"`
 	Warna  string `json:"warna"`
 	Jumlah int    `json:"jumlah"`
 	Ukuran Ukuran `json:"ukuran"`
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 type Items struct {
@@ -47,15 +60,19 @@ type Items struct {
 
 func (m Items) EncodeJSON() string {
 	// TODO: answer here
+<<<<<<< HEAD
 	// encode
 	data, _ := json.Marshal(m.MejaMeja)
 	// convert to string
 	return string(data)
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
 }
 
 func NewMeja(m Items) Items {
 	return m
 }
+<<<<<<< HEAD
 
 func main() {
 
@@ -97,3 +114,5 @@ func main() {
 	// cetak hasil
 	println(result)
 }
+=======
+>>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
