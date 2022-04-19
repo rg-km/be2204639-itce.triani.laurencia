@@ -16,6 +16,7 @@ func NewProductRepository(db db.DB) ProductRepository {
 
 func (u *ProductRepository) LoadOrCreate() ([]Product, error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//return []Product{}, nil
 
 	// buka file datanya
@@ -55,10 +56,15 @@ func (u *ProductRepository) SelectAll() ([]Product, error) {
 	return u.LoadOrCreate()
 }
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	return []Product{}, nil // TODO: replace this
 }
 
 func (u *ProductRepository) SelectAll() ([]Product, error) {
 	return []Product{}, nil // TODO: replace this
 }
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

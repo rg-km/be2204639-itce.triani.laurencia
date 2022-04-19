@@ -42,6 +42,7 @@ func main() {
 	if err != nil {
 		// Coba kalian print pesan error dari error IsEligibleToVaccine dan print pesan error yang dibungkus
 		// TODO: answer here
+<<<<<<< HEAD
 		fmt.Println(err)
 
 		// Untuk mendapatkan error yang dibungkus, kita dapat menggunakan function Unwrap.
@@ -49,5 +50,7 @@ func main() {
 			// Print error dari os.Open()
 		fmt.Println(errWrap)
 		}
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	}
 }

@@ -16,6 +16,7 @@ let arr = numInput.split(" ").map(Number);
 let maxSum = 0; 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // TODO: answer here
 =======
 // beginanswer
@@ -41,5 +42,8 @@ for (let item of arr) { // for each item of arr
 
 // endanswer
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+// TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 console.log(maxSum);

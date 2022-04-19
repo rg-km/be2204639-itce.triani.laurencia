@@ -8,6 +8,7 @@ class Player {
 
 
   getGold() {
+<<<<<<< HEAD
   // beginanswer
     return this.gold;
   //endanswer
@@ -29,6 +30,21 @@ class Player {
   // beginanswer
     this.stealChance = chance;
   //endanswer
+=======
+  // TODO: answer here
+  }
+
+  setGold(gold) {
+  // TODO: answer here
+  }
+
+  getStealChance() {
+  // TODO: answer here
+  }
+
+  setStealChance(chance) {
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   }
 
   getHasBeenRobbed() {
@@ -44,6 +60,7 @@ class Player {
   }
   
   steal(player) {
+<<<<<<< HEAD
     // beginanswer
     if (player.gold < 5) {
       return "Lawan terlalu miskin";
@@ -61,6 +78,9 @@ class Player {
 
     return "Gagal mencuri, coba lain kali";
     //endanswer
+=======
+    // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   }
 }
 

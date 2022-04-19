@@ -12,6 +12,7 @@ class Person {
     this.job = job;
   }
   
+<<<<<<< HEAD
   //beginanswer
   get getName() {
     return this.name;
@@ -37,6 +38,9 @@ class Person {
     this.job = job;
   }
   //endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 module.exports = Person

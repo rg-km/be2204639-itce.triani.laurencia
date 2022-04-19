@@ -18,11 +18,14 @@ func main() {
 func calculate(Number1, Number2 int) (sumResult, subtractResult, multiplyResult, divideResult int) {
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	sumResult = Number1+Number2
 	subtractResult = Number1-Number2
 	multiplyResult = Number1*Number2
 	divideResult = Number1/Number2
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	return
 }

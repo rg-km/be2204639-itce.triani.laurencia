@@ -1,13 +1,19 @@
 package main
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "encoding/json"
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 import (
 	"encoding/json"
 	"log"
 )
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 // Buat string JSON dengan hasil seperti berikut
 // [{"jenis":"Meja Lipat","warna":"Coklat","jumlah":40,"deskripsi":"meja untuk belajar"},{"jenis":"Meja Hijau","warna":"Hijau","jumlah":10,"deskripsi":"meja untuk pengadilan"}]
@@ -15,12 +21,15 @@ import (
 type Meja struct {
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Jenis     string `json:"jenis"`
 	Warna     string `json:"warna"`
 	Jumlah    int    `json:"jumlah"`
 	Deskripsi string `json:"deskripsi"`
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 type Items struct {
@@ -30,17 +39,21 @@ type Items struct {
 func (m Items) EncodeJSON() string {
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// encodeJSON
 	data, _ := json.Marshal(m.MejaMeja)
 	return string(data)
 
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func NewMeja(m Items) Items {
 	return m
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 func main() {
@@ -74,3 +87,5 @@ func main() {
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

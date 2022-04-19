@@ -6,6 +6,7 @@ import "fmt"
 // Kita cukup mengambil index nya
 func main() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	var slice []string
 	slice = append(slice, "k")
 	slice = append(slice, "a")
@@ -18,6 +19,8 @@ func main() {
 	slice = append(slice, "k")
 	slice = append(slice, "a")
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	var slice []int
 	slice = append(slice, 1)
 	slice = append(slice, 2)
@@ -29,7 +32,10 @@ func main() {
 	slice = append(slice, 8)
 	slice = append(slice, 9)
 	slice = append(slice, 10)
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	fmt.Println(slice[0])
 	fmt.Println(slice[9])
 

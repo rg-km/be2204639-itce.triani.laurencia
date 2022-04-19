@@ -9,6 +9,7 @@
  */
 
 const convertElementToType = (array) => {
+<<<<<<< HEAD
   // beginanswer
   const newArray = [];
   for (element of array) {
@@ -16,6 +17,9 @@ const convertElementToType = (array) => {
   }
   return newArray;
   // endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 };
 
 module.exports = convertElementToType

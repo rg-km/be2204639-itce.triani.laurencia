@@ -2,11 +2,16 @@ package repository
 
 import (
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"errors"
 =======
 	"fmt"
 	"strconv"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	"fmt"
+	"strconv"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 	"github.com/ruang-guru/playground/backend/basic-golang/cashier-app/db"
 )
@@ -20,6 +25,7 @@ func NewUserRepository(db db.DB) UserRepository {
 }
 
 func (u *UserRepository) LoadOrCreate() ([]User, error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// tujuannya untuk membuka data dari db atau create filenya
 	// TODO: replace this
@@ -144,6 +150,8 @@ func (u *UserRepository) Save(users []User) error {
 
 	return u.db.Save("users", record)
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	return []User{}, nil // TODO: replace this
 }
 
@@ -165,7 +173,10 @@ func (u *UserRepository) Logout(username string) error {
 
 func (u *UserRepository) Save(users []User) error {
 	return nil // TODO: replace this
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func (u *UserRepository) changeStatus(username string, status bool) error {
@@ -174,6 +185,7 @@ func (u *UserRepository) changeStatus(username string, status bool) error {
 		return err
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// error disini
 	for i := 0; i < len(users); i++ {
@@ -214,10 +226,15 @@ func (u *UserRepository) LogoutAll() error {
 	return nil
 }
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	return nil // TODO: replace this
 }
 
 func (u *UserRepository) LogoutAll() error {
 	return nil // TODO: replace this
 }
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

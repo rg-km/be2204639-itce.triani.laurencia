@@ -6,11 +6,14 @@ import "encoding/json"
 // Mengambil kasus pada encode, lengkapi function DecodeToLeaderboard agar json dapat di decode menjadi objek Leaderboard
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type UserRank struct {
 	Name  string
 	Email string `json:"-"`
 	Rank  int
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 // type UserRank struct {
 // 	Name  string
 // 	Email string
@@ -19,7 +22,10 @@ type UserRank struct {
 
 type UserRank struct {
 	// TODO: answer here
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 type Leaderboard struct {
@@ -28,6 +34,7 @@ type Leaderboard struct {
 
 func DecodeToLeaderboard(jsonData []byte) (Leaderboard, error) {
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// inisiasi leaderboard
 	var leaderboard Leaderboard
@@ -80,3 +87,6 @@ func main() {
 =======
 }
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

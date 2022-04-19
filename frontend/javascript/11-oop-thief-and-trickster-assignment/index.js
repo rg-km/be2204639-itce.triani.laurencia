@@ -7,6 +7,7 @@ class Thief extends Player {
   }
   
   robbedBlind() {
+<<<<<<< HEAD
     //beginanswer
     if (this.getGold() < 10) {
       return "Aku terlalu miskin";
@@ -38,6 +39,13 @@ class Thief extends Player {
 
     return "Gagal mencuri, coba lain kali";
     //endanswer
+=======
+    // TODO: answer here
+  }
+
+  steal(player) {
+    // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   }
 }
 
@@ -49,6 +57,7 @@ class Trickster extends Player {
   }
 
   setDistractionPurseChance(chance) {
+<<<<<<< HEAD
     //beginanswer
     this.distractionPurseChance = chance;
     //endanswer
@@ -58,10 +67,18 @@ class Trickster extends Player {
     //beginanswer
     return this.distractionPurseChance;
     //endanswer
+=======
+    // TODO: answer here
+  }
+
+  getDistractionPurseChance() {
+    // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   }
 
   distractionPurse(player) {
     const rng = this.randomizer();
+<<<<<<< HEAD
     //beginanswer
     if (rng <= this.distractionPurseChance) {
       if (player.getGold() < 10) {
@@ -102,6 +119,13 @@ class Trickster extends Player {
 
     return "Gagal mencuri, coba lain kali";
     //endanswer
+=======
+    // TODO: answer here
+  }
+
+  steal(player) {
+    // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   }
 }
 

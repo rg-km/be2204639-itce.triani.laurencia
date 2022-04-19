@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 <<<<<<< HEAD
+<<<<<<< HEAD
 )
 
 // TODO: answer here
@@ -34,6 +35,8 @@ func (r Ruang) EncodeJSON() string {
 	return string(data)
 
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	"log"
 )
 
@@ -69,12 +72,16 @@ func (r Ruang) EncodeJSON() string {
 
 func (r Ruang) EncodeJSON() string {
 	// TODO: answer here
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func NewRuang(r Ruang) Ruang {
 	return r
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 func main() {
@@ -120,3 +127,5 @@ func main() {
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

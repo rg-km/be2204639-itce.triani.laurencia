@@ -13,6 +13,7 @@ func GetMenu() []map[string]interface{} {
 
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ayamGoreng := make(map[string]interface{})
 	ayamGoreng["Nama"] = "Ayam Goreng"
 	ayamGoreng["Jenis"] = "Cepat saji"
@@ -28,6 +29,8 @@ func GetMenu() []map[string]interface{} {
 	menu = append(menu, cola)
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 	return menu
 }
@@ -41,7 +44,11 @@ func main() {
 		}
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

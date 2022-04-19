@@ -22,9 +22,12 @@ func IsEligibleToVaccine(data map[string]int, name string) (bool, error) {
 	if err != nil {
 		// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return false, fmt.Errorf("error in IsEligibleToVaccine, err: %w", err)
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	}
 	if age < 15 {
 		return false, nil
@@ -44,6 +47,7 @@ func main() {
 		// Cek apakah err merupakan jenis error ErrDataNotFound
 		// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 		fmt.Println(err)
 
 		// Mengecek jenis error
@@ -52,5 +56,7 @@ func main() {
 		}
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	}
 }

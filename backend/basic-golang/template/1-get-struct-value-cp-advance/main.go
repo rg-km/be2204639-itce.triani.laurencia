@@ -4,12 +4,17 @@ import (
 	"bytes"
 	"fmt"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"html/template"
 	"log"
 =======
 	"log"
 	"text/template"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	"log"
+	"text/template"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 )
 
 //Buat function untuk menghitung average score siswa
@@ -23,6 +28,7 @@ type Student struct {
 func (s Student) CalculateScore(scores []float64) float64 {
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	sum := 0.0
 	for _, score := range scores {
 		sum += score
@@ -32,11 +38,14 @@ func (s Student) CalculateScore(scores []float64) float64 {
 
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func (s Student) GenerateStudentTemplate() string {
 	buff := new(bytes.Buffer)
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 	// register function calculateScore
@@ -54,6 +63,8 @@ func (s Student) GenerateStudentTemplate() string {
 
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	return buff.String()
 }
 

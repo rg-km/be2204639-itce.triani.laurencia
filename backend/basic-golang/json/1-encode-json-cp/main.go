@@ -3,10 +3,14 @@ package main
 import (
 	"encoding/json"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"fmt"
 =======
 	"log"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	"log"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 )
 
 // Dari struct dan nama field yang sama dari contoh
@@ -16,15 +20,19 @@ import (
 type Meja struct {
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Jenis  string `json:"jenis"`
 	Warna  string `json:"color"`
 	Jumlah int    `json:"jumlah"`
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func (m Meja) EncodeJSON() string {
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// konversti sturct ke json
 	data, _ := json.Marshal(m)
@@ -32,11 +40,14 @@ func (m Meja) EncodeJSON() string {
 
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func NewMeja(m Meja) Meja {
 	return m
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 func main() {
@@ -56,3 +67,5 @@ func main() {
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

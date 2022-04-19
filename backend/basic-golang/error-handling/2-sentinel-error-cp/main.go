@@ -12,8 +12,11 @@ import (
 var ErrDataNotFound = errors.New("error data not found")
 
 // TODO: answer here
+<<<<<<< HEAD
 var ErrInvalidAge = errors.New("error age is invalid, less than 0")
 
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 func GetAge(data map[string]int, name string) (int, error) {
 	if _, ok := data[name]; !ok {
@@ -23,7 +26,10 @@ func GetAge(data map[string]int, name string) (int, error) {
 	if data[name] < 0 {
 		// Isilah baris ini dengan return 0 dan sentinel error ErrInvalidAge
 		// TODO: answer here
+<<<<<<< HEAD
 		return 0, ErrInvalidAge
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	}
 
 	return data[name], nil

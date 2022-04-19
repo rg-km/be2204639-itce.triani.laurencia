@@ -18,6 +18,7 @@ func main() {
 	// TODO: answer here
 	for _, val := range namaUmur {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		fmt.Println(val["name"], " ", val["gender"],)	
 	}
 	fmt.Println()
@@ -26,6 +27,11 @@ func main() {
 	}
 
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+		fmt.Println(val["name"], " ", val["gender"])
+	}
+
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	// Nah coba saatnya kalian menghapuskan key "gender" pada setiap data
 	// delete data if key is equal "gender"
 
@@ -33,9 +39,12 @@ func main() {
 		fmt.Println(val)
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	fmt.Println()
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	// Output sebelum dihapus
 	/*
 		map[gender:male name:Socrates]
@@ -47,6 +56,7 @@ func main() {
 
 	// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 	for _, val := range namaUmur {
 		delete(val, "gender")
 		fmt.Println(val)
@@ -54,6 +64,8 @@ func main() {
 	fmt.Println()
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 	// Output setelah dihapus
 	/*
@@ -64,10 +76,16 @@ func main() {
 		map[name:Blaise Pascal]
 	*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 	for _, val := range namaUmur {
 		fmt.Println(val)
 	}
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	for _, val := range namaUmur {
+		fmt.Println(val)
+	}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

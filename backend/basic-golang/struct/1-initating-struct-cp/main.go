@@ -1,16 +1,21 @@
 package main
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import (
 	"fmt"
 )
 =======
 import "fmt"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+import "fmt"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 //buat struct Rectangle dengan dua atribut yaitu Width dan Length
 
 // TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 type Rectangle struct{
 	Width int
@@ -18,6 +23,8 @@ type Rectangle struct{
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 func main() {
 	var r Rectangle

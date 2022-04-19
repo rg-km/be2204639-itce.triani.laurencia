@@ -2,16 +2,21 @@ const { test, expect } = require("@playwright/test");
 const path = require("path");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 test("basic test", async ({ page }) => {
 =======
 test.beforeEach(async ({ page }) => {
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+test.beforeEach(async ({ page }) => {
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
   await page.goto(
     `file:${path.join(
       __dirname,
       "../../../../frontend/dom/guess-number-assignment/index.html"
     )}`
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const title = await page.locator(".input").type("1");
@@ -23,6 +28,8 @@ test.beforeEach(async ({ page }) => {
     (await page.locator("#hidden-number").textContent())
   ) {
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 });
 
 test("check if input value smaller than random number", async ({ page }) => {
@@ -35,14 +42,20 @@ test("check if input value smaller than random number", async ({ page }) => {
   expect(hidden_number).toBeGreaterThan(0);
 
   if (1 < hidden_number) {
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
     expect(await page.locator(".message").textContent()).toBe(
       "Too small, buddy!"
     );
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 test("check if input value greater than random number", async ({ page }) => {
   await page.locator(".input").type("10");
@@ -83,4 +96,7 @@ test("reset message", async ({ page }) => {
     "Lets start guessing..."
   );
 });
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

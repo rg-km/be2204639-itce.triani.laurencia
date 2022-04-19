@@ -1,6 +1,11 @@
 package main
 
 import (
+<<<<<<< HEAD
+=======
+	"fmt"
+
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	"github.com/ruang-guru/playground/backend/data-structure/assignment/text-editor/stack"
 )
 
@@ -24,6 +29,7 @@ func NewTextEditor() *TextEditor {
 }
 
 func (te *TextEditor) Write(ch rune) {
+<<<<<<< HEAD
 	te.RedoStack.SetToEmpty()
 	te.UndoStack.Push(ch)
 }
@@ -82,3 +88,19 @@ func (te *TextEditor) Redo() {
 
 	te.UndoStack.Push(peek)
 }
+=======
+	// TODO: answer here
+}
+
+func (te *TextEditor) Read() []rune {
+	// TODO: answer here
+}
+
+func (te *TextEditor) Undo() {
+	// TODO: answer here
+}
+
+func (te *TextEditor) Redo() {
+	// TODO: answer here
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

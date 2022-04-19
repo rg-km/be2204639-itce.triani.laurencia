@@ -49,6 +49,7 @@ func NewEnglishSpellChecker() (SpellChecker, error) {
 }
 
 func (s *spellchecker) CheckWord(word string) bool {
+<<<<<<< HEAD
 	word = strings.ToLower(word) //convert word to lowercase
 
 	if _, ok := s.words[word]; ok { //check if word is in dictionary
@@ -71,4 +72,11 @@ func (s *spellchecker) CheckSentence(sentence string) (validWords []string, inva
 	}
 
 	return validWords, invalidWords
+=======
+	return false // TODO: replace this
+}
+
+func (s *spellchecker) CheckSentence(sentence string) (validWords []string, invalidWords []string) {
+	return nil, nil // TODO: replace this
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

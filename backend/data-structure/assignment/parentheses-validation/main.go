@@ -25,6 +25,7 @@ import "github.com/ruang-guru/playground/backend/data-structure/assignment/paren
 // Penjelasan: tanda kurung buka ditutup dengan pasangannya dan sesuai dengan urutan.
 
 func IsValidParentheses(s string) bool {
+<<<<<<< HEAD
 	// validasi panjang stringnya tdk genap (%) atau string kosong -> return false
 	if len(s)%2 != 0 || len(s) == 0 {
 		return false
@@ -67,3 +68,7 @@ func IsValidParentheses(s string) bool {
 	return stack.IsEmpty()
 
 }
+=======
+	// TODO: answer here
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
