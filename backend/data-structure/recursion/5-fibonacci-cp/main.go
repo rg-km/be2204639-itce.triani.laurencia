@@ -34,6 +34,8 @@ func FibonacciRecursion(i int) int {
 	}
 
 	// TODO: answer here
+	// if i more than 1, then return 
+	return FibonacciRecursion(i-1) + FibonacciRecursion(i-2)
 }
 
 func main() {
