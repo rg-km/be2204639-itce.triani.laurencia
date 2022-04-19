@@ -28,10 +28,14 @@
 
 function getMaximumGold(grid) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
     // TODO: answer here
 }; 
 
 // TODO: answer here
+<<<<<<< HEAD
 =======
     // beginanswer
 
@@ -82,5 +86,7 @@ function outOfBound(row, col, m, n) {
 }
 // endanswer
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 module.exports = getMaximumGold

@@ -7,11 +7,14 @@ import "encoding/json"
 // Modifikasi struct UserRank sehingga field Name menjadi name ,field Rank menjadi rank, dan field Email tidak ikut untuk diencode.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type UserRank struct {
 	Name  string `json:"name"`
 	Email string `json:"-"`
 	Rank  int    `json:"rank"`
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 // type UserRank struct {
 // 	Name  string
 // 	Email string
@@ -20,7 +23,10 @@ type UserRank struct {
 
 type UserRank struct {
 	// TODO: answer here
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 type Leaderboard struct {
@@ -29,6 +35,7 @@ type Leaderboard struct {
 
 func EncodeToJson(leaderboard Leaderboard) ([]byte, error) {
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	data, err := json.Marshal(leaderboard)
 	return data, err
@@ -85,3 +92,6 @@ func main() {
 =======
 }
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

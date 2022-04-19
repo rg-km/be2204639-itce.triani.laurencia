@@ -11,6 +11,9 @@
 
 // PSEUDOCODE:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 // TODO: answer here
 
 function gatcha(button) {
@@ -19,6 +22,7 @@ function gatcha(button) {
 
 // Create variable button here
 // TODO: answer here
+<<<<<<< HEAD
 =======
 //beginanswer
 // SET 'button' with random value
@@ -74,6 +78,8 @@ function gatcha(button) {
 var button = Math.round(Math.random() * 10);
 //endanswer
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 console.log(gatcha(button))
 

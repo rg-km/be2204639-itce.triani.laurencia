@@ -10,6 +10,7 @@ func NewTransactionRepository(cartItemRepository CartItemRepository) Transaction
 
 func (u *TransactionRepository) Pay(amount int) (int, error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// TODO: replace this
 
 	// selesaikan card dulu
@@ -28,3 +29,7 @@ func (u *TransactionRepository) Pay(amount int) (int, error) {
 	return 0, nil // TODO: replace this
 }
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	return 0, nil // TODO: replace this
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

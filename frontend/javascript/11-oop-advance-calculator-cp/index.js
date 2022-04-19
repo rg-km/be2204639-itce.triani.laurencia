@@ -15,6 +15,7 @@ class Calculator {
   constructor (operand) {
     this.operand = operand;
   }
+<<<<<<< HEAD
   //beginanswer
   add (angka) {
     this.operand += angka;
@@ -41,6 +42,9 @@ class Calculator {
     return this
   }
   //endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 module.exports = Calculator

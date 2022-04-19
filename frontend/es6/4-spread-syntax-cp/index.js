@@ -8,6 +8,7 @@
  * Dilarang menggunakan Math.max
  */
 const max = (...args) => {
+<<<<<<< HEAD
   //beginanswer
   return args.reduce((previous, current) => {
     if (current > previous) {
@@ -17,6 +18,9 @@ const max = (...args) => {
     }
   }, 0);
   //endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 };
 
 module.exports = max

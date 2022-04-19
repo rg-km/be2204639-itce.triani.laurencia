@@ -1,6 +1,7 @@
 package main
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import (
 	"fmt"
 
@@ -9,6 +10,9 @@ import (
 =======
 import "fmt"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+import "fmt"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 //buat struct Rectangle dengan dua atribut yaitu Width dan Length
 // tambah dua method :
@@ -17,6 +21,7 @@ import "fmt"
 // SetWidthValue(width int) untuk mengubah width dengan value
 
 // TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 type Rectangle struct {
 	width int
@@ -38,6 +43,8 @@ func main() {
 	fmt.Println("sesudah melakukan set width dengan pointer", r.width)
 	r.SetWidthValue(70)
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 func main() {
 	var r Rectangle
 	r.Width = 10
@@ -48,5 +55,8 @@ func main() {
 	fmt.Println("sesudah melakukan set width dengan pointer", r.Width)
 	r.SetWidthValue(70)
 	fmt.Println("sesudah melakukan set width dengan value", r.Width)
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

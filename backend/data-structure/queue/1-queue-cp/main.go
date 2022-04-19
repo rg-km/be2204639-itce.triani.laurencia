@@ -46,6 +46,7 @@ func main() {
 }
 
 func CountStudents(students []int, sandwiches []int) int {
+<<<<<<< HEAD
 	var count int
 	var counter [2]int
 	for i := 0; i < len(students); i++ {
@@ -64,3 +65,7 @@ func CountStudents(students []int, sandwiches []int) int {
 	return count
 	// TODO: replace this
 }
+=======
+	0 // TODO: replace this
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

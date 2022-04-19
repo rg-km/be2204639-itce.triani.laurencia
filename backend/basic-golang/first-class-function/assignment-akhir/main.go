@@ -9,6 +9,7 @@ import "fmt"
 func points(base int) func(x int) int {
 		// TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return func(x int) int {
 			x=x+base
 			return x
@@ -17,6 +18,9 @@ func points(base int) func(x int) int {
 =======
 	}
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func main() {

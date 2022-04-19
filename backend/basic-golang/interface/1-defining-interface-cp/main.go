@@ -13,6 +13,7 @@ import "fmt"
 
 // TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Employee interface {
 	GetBonus() int // kumpulan method
 }
@@ -44,10 +45,13 @@ func (s JuniorEngineer) GetBonus() int {
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 
 func TotalEmployeeBonus(employees []Employee) int {
 	// Hitunglah total bonus yang dikeluarkan dari list of Employee
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	total := 0
 	for _, value := range employees {
@@ -57,11 +61,14 @@ func TotalEmployeeBonus(employees []Employee) int {
 	return total
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func main() {
 	// Buatlah objek konkret untuk masing-masing objek dan panggil function TotalEmployeeBonus. Print total bonus untuk semua employee.
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	manager := Manager{
 		BaseSalary: 20000000,
@@ -77,4 +84,6 @@ func main() {
 	fmt.Println("total bonus", totalBonus)
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

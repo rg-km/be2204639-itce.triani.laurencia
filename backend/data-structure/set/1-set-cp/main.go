@@ -22,6 +22,7 @@ func main() {
 }
 
 func Intersection(str1, str2 []string) (inter []string) {
+<<<<<<< HEAD
 	// Function Intersection
 	hash := make(map[string]bool)
 
@@ -50,4 +51,11 @@ func RemoveDuplicates(elements []string) (nodups []string) {
 		}
 	}
 	return nodups   // TODO: replace this
+=======
+	return []string{} // TODO: replace this
+}
+
+func RemoveDuplicates(elements []string) (nodups []string) {
+	return []string{} // TODO: replace this
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

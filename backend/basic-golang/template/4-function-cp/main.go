@@ -3,10 +3,14 @@ package main
 import (
 	"bytes"
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"text/template"
 =======
 	"html/template"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	"html/template"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 )
 
 // Dari contoh yang telah diberikan, kamu dapat mencoba untuk menggunakan function pada template.
@@ -29,6 +33,7 @@ type Leaderboard struct {
 
 func CalculateScore(leaderboard Leaderboard) int {
 	// TODO: answer here
+<<<<<<< HEAD
 <<<<<<< HEAD
 	// bikin variable total
 	total := 0
@@ -114,10 +119,15 @@ func main() {
 	// cetak output
 	println(string(b))
 =======
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func ExecuteToByteBuffer(leaderboard Leaderboard) ([]byte, error) {
 	var textTemplate string
 	// TODO: answer here
+<<<<<<< HEAD
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }

@@ -12,9 +12,12 @@ func main() {
 
 // TODO: answer here
 <<<<<<< HEAD
+<<<<<<< HEAD
 func multiply(number1, number2 int) int {
 	result := number1 * number2
 	return result
 }
 =======
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

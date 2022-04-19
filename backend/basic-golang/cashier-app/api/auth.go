@@ -3,9 +3,13 @@ package api
 import (
 	"encoding/json"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	"fmt"
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	"fmt"
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 	"net/http"
 )
 
@@ -31,6 +35,7 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	w.WriteHeader(http.StatusOK)
 
 	json.NewEncoder(w).Encode(LoginSuccessResponse{Username: *res}) // TODO: replace this
@@ -39,11 +44,17 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 
 	json.NewEncoder(w).Encode(LoginSuccessResponse{Username: ""}) // TODO: replace this
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	fmt.Println(res)
+
+	json.NewEncoder(w).Encode(LoginSuccessResponse{Username: ""}) // TODO: replace this
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 func (api *API) logout(w http.ResponseWriter, req *http.Request) {
 	username := req.URL.Query().Get("username")
 	err := api.usersRepo.Logout(username)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	encoder := json.NewEncoder(w)
 	if err != nil {
@@ -53,10 +64,16 @@ func (api *API) logout(w http.ResponseWriter, req *http.Request) {
 		w.WriteHeader(http.StatusUnauthorized)
 		encoder := json.NewEncoder(w)
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	if err != nil {
+		w.WriteHeader(http.StatusUnauthorized)
+		encoder := json.NewEncoder(w)
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 		encoder.Encode(AuthErrorResponse{Error: err.Error()})
 		return
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	encoder.Encode(AuthErrorResponse{Error: username}) // TODO: replace this
 }
@@ -64,3 +81,7 @@ func (api *API) logout(w http.ResponseWriter, req *http.Request) {
 	encoder.Encode(AuthErrorResponse{Error: ""}) // TODO: replace this
 }
 >>>>>>> a4636229be3b4b37edbce94179d899e01a770c2c
+=======
+	encoder.Encode(AuthErrorResponse{Error: ""}) // TODO: replace this
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015

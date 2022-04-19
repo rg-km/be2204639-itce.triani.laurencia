@@ -12,6 +12,7 @@
  */
 
 const checkOmnipresent = (array, valueToFind) => {
+<<<<<<< HEAD
   // beginanswer
   let numberOfPresent = 0;
 
@@ -24,6 +25,9 @@ const checkOmnipresent = (array, valueToFind) => {
   }
   return array.length === numberOfPresent;
   // endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 };
 
 module.exports = checkOmnipresent

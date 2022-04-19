@@ -3,6 +3,7 @@
 // function ini menduplikasi tiap karakter pada sebuah string
 // contoh: hehe => hheehhee
 function doubleChars(str) {
+<<<<<<< HEAD
   // kerjakan disini
   //beginanswer
   return str
@@ -10,10 +11,14 @@ function doubleChars(str) {
     .map((c) => `${c}${c}`)
     .join("");
   //endanswer
+=======
+  // TODO: answer here
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 }
 
 // function ini mengulang pengaplikasian callback pada str sejumlah num
 function repeat(str, num, cb) {
+<<<<<<< HEAD
   // kerjakan disini
   //beginanswer
   let result = str;
@@ -27,3 +32,14 @@ function repeat(str, num, cb) {
 }
 
 console.log(repeat("triple", 2, doubleChars)); // ttttrrrriiiipppplllleeee
+=======
+  // TODO: answer here
+}
+
+console.log(repeat("triple", 2, doubleChars)); //  ttttrrrriiiipppplllleeee
+
+module.exports = {
+  doubleChars,
+  repeat
+}
+>>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
