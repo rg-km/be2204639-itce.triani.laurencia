@@ -7,10 +7,6 @@ import "fmt"
 func Reverse(st []string, depth int) string {
 	str := ""
 	// TODO: answer here
-	// loop untuk mengambil nilai dari array
-	for i := depth; i >= 0; i-- {
-		str += st[i]
-	}
 	return str
 }
 

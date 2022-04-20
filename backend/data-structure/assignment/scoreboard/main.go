@@ -18,7 +18,19 @@ func (s Scores) Len() int {
 }
 
 func (s Scores) Less(i, j int) bool {
-	return false // TODO: replace this
+	// Less Functions
+	name1 := s[i].Name
+	name2 := s[j].Name
+
+	score1 := s[i].Correct*4 - s[i].Wrong
+	score2 := s[j].Correct*4 - s[j].Wrong
+
+	if score1 == score2 {
+		return name1 < name2
+	}
+	return score1 > score2
+
+	// TODO: replace this
 }
 
 func (s Scores) Swap(i, j int) {

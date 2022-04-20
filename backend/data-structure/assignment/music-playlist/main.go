@@ -46,13 +46,33 @@ func NewMusicPlayer() MusicPlayer {
 }
 
 func (mp *MusicPlayer) AddSong(song Song) {
+	// Function to Add Song
+	mp.Playlist.Songs = append(mp.Playlist.Songs, song)
+
 	// TODO: answer here
 }
 
 func (mp *MusicPlayer) Play() string {
+	// Function Play Music
+	if mp.Playlist.IsEmpty() {
+		return "Playlist is empty"
+	}
+	return fmt.Sprintf("Now playing %s - %s", mp.Playlist.Songs[0].Singer, mp.Playlist.Songs[0].Title)
+
 	// TODO: answer here
 }
 
 func (p *Playlist) Repeat() {
+	// Function Repeat Playlist
+	if p.IsRepeatable {
+		p.Songs = append(p.Songs, p.Songs...)
+	}
 	// TODO: answer here
+}
+func main() {
+	// Fucntion Main
+	mp := NewMusicPlayer()
+	mp.AddSong(Song{Singer: "One Direction", Title: "Night Changes"})
+	mp.AddSong(Song{Singer: "One Direction", Title: "I'm a Mess"})
+
 }

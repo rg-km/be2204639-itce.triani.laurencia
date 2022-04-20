@@ -20,14 +20,39 @@ func main() {
 	var nums = []int{4, 5, 2, 1, 3}
 	arrSorted := Sort(nums)
 	fmt.Println(arrSorted)
-	rotateLeft := RotateLeft(2, arrSorted)
+	rotateLeft := RotateLeft(4, arrSorted)
 	fmt.Println(rotateLeft)
 }
 
 func Sort(arr []int) []int {
-	return []int{} // TODO: replace this
+	// Know Length Array
+	swapped := false //Untuk memeriksa apakah array sudah diurutkan; kemudian return;
+	for i := 0; i < len(arr)-1; i++ {
+		for j := 0; j < len(arr)-1; j++ {
+			if arr[j] > arr[j+1] {
+				//elemen bertukar
+				arr[j], arr[j+1] = arr[j+1], arr[j]
+				swapped = true
+			}
+		}
+		if !swapped {
+			return arr
+		}
+	}
+	return arr
 }
 
 func RotateLeft(d int, arr []int) []int {
-	return []int{} // TODO: replace this
+	length := len(arr)
+
+	// Copy arr ambil mulai indeks d sampai len(arr) atau subslice
+	subArr := arr[d:length]
+
+	// Looping arr indeks 0 sampai sebelum indeks d atau append value ke copy arr/result
+	for _, value := range arr[0:d] {
+		subArr = append(subArr, value)
+	}
+
+	// return hasil copy
+	return subArr // TODO: replace this
 }
