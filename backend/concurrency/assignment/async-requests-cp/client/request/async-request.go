@@ -13,10 +13,11 @@ func AsyncHttpGets(urls []string) []*http.Response {
 	ch := make(chan *http.Response)
 	responses := []*http.Response{}
 	// TODO: answer here
+	User := http.Client{}
 	for _, url := range urls {
 		go func(url string) {
 			// TODO: answer here
-			resp, err := http.Get(url)
+			resp, err := User.Get(url)
 			if err != nil {
 				fmt.Println("error", err)
 			}
