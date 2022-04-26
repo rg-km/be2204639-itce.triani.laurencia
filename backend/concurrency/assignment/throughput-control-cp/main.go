@@ -14,7 +14,7 @@ const numOfRequests = 1000
 func doubleCalculatorWorker(queue chan request, maxThroughput int, maxObservedThroughtputC chan int) {
 	// TODO: answer here
 	// buffered channel
-	myLife := make(chan int, maxmaxThroughput)
+	myLife := make(chan int, maxThroughput)
 	// var bufferedChannel = make(chan request,  maxmaxThroughput)
 
 	maxObservedThroughtput := 0
