@@ -55,13 +55,6 @@ require (
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
-<<<<<<< HEAD
-=======
-	github.com/gin-gonic/gin v1.7.7
-	github.com/golang-jwt/jwt/v4 v4.4.1
-	github.com/gorilla/pat v1.0.1
-	github.com/gorilla/sessions v1.2.1
->>>>>>> de9d15ad9de3496f1e623050903f723de922d236
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
