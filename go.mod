@@ -14,12 +14,8 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.2.0
 	github.com/gorilla/context v1.1.1
 	github.com/gorilla/mux v1.8.0
-<<<<<<< HEAD
 	github.com/gorilla/pat v0.0.0-20180118222023-199c85a7f6d1
 	github.com/gorilla/sessions v1.1.1
-=======
-	github.com/mattn/go-sqlite3 v1.14.12
->>>>>>> 021a27023f909726932ab221c53b9eee7ac2acb6
 	github.com/onsi/ginkgo v1.16.4
 	github.com/pkg/profile v1.6.0
 	github.com/prometheus/client_golang v1.12.1
