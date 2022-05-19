@@ -1,58 +1,55 @@
-// Sort array terlebih dahulu, kemudian rotasi ke kiri sesuai dengan nilai yang telah ditentukan.
-//
-// Contoh Sort array:
-// Input: [4,5,2,1,3]
-// Output: [1,2,3,4,5]
-
-//Contoh RotateLeft:
-//Input: 4, [1,2,3,4,5]
-//Output: [5,1,2,3,4]
-
-// Explanation RotateLeft:
-// untuk melakukan rotasi kiri dengan nilai 4, array mengalami urutan perubahan berikut:
-// [1,2,3,4,5] -> [2,3,4,5,1] -> [3,4,5,1,2] -> [4,5,1,2,3] -> [5,1,2,3,4]
-
 package main
 
-import "fmt"
+type EmployeeRow struct {
+	ID        int // primary key
+	Name      string
+	Position  string
+	Salary    int
+	ManagerID int // foreign key -> Employee
+}
+type EmployeeDB []EmployeeRow
 
-func main() {
-	var nums = []int{4, 5, 2, 1, 3}
-	arrSorted := Sort(nums)
-	fmt.Println(arrSorted)
-	rotateLeft := RotateLeft(4, arrSorted)
-	fmt.Println(rotateLeft)
+func NewEmployeeDB() *EmployeeDB {
+	return &EmployeeDB{}
 }
 
-func Sort(arr []int) []int {
-	// Know Length Array
-	swapped := false //Untuk memeriksa apakah array sudah diurutkan; kemudian return;
-	for i := 0; i < len(arr)-1; i++ {
-		for j := 0; j < len(arr)-1; j++ {
-			if arr[j] > arr[j+1] {
-				//elemen bertukar
-				arr[j], arr[j+1] = arr[j+1], arr[j]
-				swapped = true
-			}
-		}
-		if !swapped {
-			return arr
+func (db *EmployeeDB) Where(id int) *EmployeeRow {
+	for i := 0; i < len(*db); i++ {
+		if (*db)[i].ID == id {
+			return &(*db)[i]
 		}
 	}
-	return arr
+	return nil
 }
 
-func RotateLeft(d int, arr []int) []int {
-	length := len(arr)
+func (db *EmployeeDB) Insert(name string, position string, salary int, managerID int) {
+	(*db) = append(*db, EmployeeRow{
+		ID:        len(*db) + 1,
+		Name:      name,
+		Position:  position,
+		Salary:    salary,
+		ManagerID: managerID,
+	})
+}
 
-	// Copy arr ambil mulai indeks d sampai len(arr) atau subslice
-	subArr := arr[d:length]
+func (db *EmployeeDB) Update(id int, name string, position string, salary int, managerID int) {
+	// search employee by id
+	employee := db.Where(id)
 
-	// Looping arr indeks 0 sampai sebelum indeks d atau append value ke copy arr/result
-	for _, value := range arr[0:d] {
-		subArr = append(subArr, value)
+	// assign new value to properties
+	employee.Name = name
+	employee.Position = position
+	employee.Salary = salary
+	employee.ManagerID = managerID
+}
+
+func (db *EmployeeDB) Delete(id int) {
+	// search employee by id
+	for i, employee := range *db {
+		if employee.ID == id {
+			// remove existing employee with specified id from table
+			*db = append((*db)[:i], (*db)[i+1:]...)
+			return
+		}
 	}
-
-	// return hasil copy
-	return subArr // TODO: replace this
 }
