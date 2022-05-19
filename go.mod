@@ -14,8 +14,12 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.2.0
 	github.com/gorilla/context v1.1.1
 	github.com/gorilla/mux v1.8.0
+<<<<<<< HEAD
 	github.com/gorilla/pat v0.0.0-20180118222023-199c85a7f6d1
 	github.com/gorilla/sessions v1.1.1
+=======
+	github.com/mattn/go-sqlite3 v1.14.12
+>>>>>>> 021a27023f909726932ab221c53b9eee7ac2acb6
 	github.com/onsi/ginkgo v1.16.4
 	github.com/pkg/profile v1.6.0
 	github.com/prometheus/client_golang v1.12.1
@@ -78,7 +82,7 @@ require (
 	github.com/subosito/gotenv v1.2.0 // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
-	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
+	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect

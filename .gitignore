@@ -1,5 +1,6 @@
 .DS_Store
 .vscode
+.idea
 site/public
 site/.hugo_build.lock
 
@@ -159,7 +160,7 @@ grader-cli
 >>>>>>> 07b990f807137670d6b56e66abb172c46ab52015
 =======
 grader-cli
-
+*.db
 
 # output of profiling file
 *.pprof
