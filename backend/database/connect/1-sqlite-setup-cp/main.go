@@ -28,6 +28,8 @@ func ConnectSQLite() (string, error) {
 	if err != nil {
 		return "", err
 	}
+
 	defer db.Close()
+
 	return "You are successfully opening the database studentData.db", nil
 }
