@@ -20,21 +20,20 @@ func NewUserRepository(db *sql.DB) UserRepositoryInterface {
 }
 
 func (ur *UserRepository) FetchUserByID(id int) (*model.User, error) {
+	var sqlStatement string
 
 	// Task 1: lengkapi statement SQL untuk mengambil data user berdasarkan id
 	// TODO: answer here
-	sqlStatement := `
-		SELECT 
-			id, name, created_at 
-		FROM users 
-		WHERE 
-			id = ?
-	`
-
+	sqlStatement = `
+	SELECT id, name, created_at
+	FROM users
+	WHERE id = ?;`
+	row := ur.db.QueryRow(sqlStatement, id)
 	var user model.User
+
 	// Task 2: buatlah query dengan prepared statement dengan statement SQL yang sudah di lengkapi	diatas
 	// TODO: answer here
-	row := ur.db.QueryRow(sqlStatement, id)
+
 	err := row.Scan(&user.ID, &user.Name, &user.CreatedAt)
 	if err != nil {
 		return nil, err
@@ -44,13 +43,11 @@ func (ur *UserRepository) FetchUserByID(id int) (*model.User, error) {
 }
 
 func (ur *UserRepository) DeleteUserByID(id int) error {
+	var sqlStatement string
 
 	// Task 1: lengkapi statement SQL untuk menghapus data user berdasarkan id
 	// TODO: answer here
-	sqlStatement := `
-		DELETE FROM users
-		WHERE id = ?
-		`
+	sqlStatement = `DELETE FROM users WHERE id = ?;`
 
 	// Task 2: buatlah exec query dengan prepared statement dengan statement SQL yang sudah di lengkapi	diatas
 	// TODO: answer here

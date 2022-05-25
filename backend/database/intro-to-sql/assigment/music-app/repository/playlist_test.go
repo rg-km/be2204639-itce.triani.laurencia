@@ -2,8 +2,6 @@ package repository
 
 import (
 	"database/sql"
-	"fmt"
-	"os"
 
 	_ "github.com/mattn/go-sqlite3"
 	. "github.com/onsi/ginkgo/v2"
@@ -30,8 +28,7 @@ var _ = Describe("Playlist", func() {
 		_, err = db.Exec(`INSERT INTO users (id, name, created_at) VALUES
 			(1, 'John', '2020-01-01 00:00:00');`)
 		if err != nil {
-			// panic(err)
-			fmt.Println(err)
+			panic(err)
 		}
 
 		_, err = db.Exec(`CREATE TABLE IF NOT EXISTS playlists (
@@ -49,8 +46,7 @@ var _ = Describe("Playlist", func() {
 		(2, 'POP 2022', '2020-01-01 00:00:00', 1),
 		(3, 'Rock', '2020-01-01 00:00:00', 1);`)
 		if err != nil {
-			// panic(err)
-			fmt.Println(err)
+			panic(err)
 		}
 
 		_, err = db.Exec(`CREATE TABLE IF NOT EXISTS tracks (
@@ -70,8 +66,7 @@ var _ = Describe("Playlist", func() {
     	(5, 'Music E', 'Rony', '2020-01-01 00:00:00'),
     	(6, 'Music F', 'Jane', '2020-01-01 00:00:00');`)
 		if err != nil {
-			// panic(err)
-			fmt.Println(err)
+			panic(err)
 		}
 
 		_, err = db.Exec(`CREATE TABLE IF NOT EXISTS playlist_tracks (
@@ -91,13 +86,31 @@ var _ = Describe("Playlist", func() {
 		(2, 5),
 		(3, 6);`)
 		if err != nil {
-			// panic(err)
-			fmt.Println(err)
+			panic(err)
 		}
 	})
 
 	AfterEach(func() {
-		os.Remove("./music-app.db")
+		db, err := sql.Open("sqlite3", "./music-app.db")
+		if err != nil {
+			panic(err)
+		}
+		_, err = db.Exec("DROP TABLE IF EXISTS users")
+		if err != nil {
+			panic(err)
+		}
+		_, err = db.Exec("DROP TABLE IF EXISTS playlists")
+		if err != nil {
+			panic(err)
+		}
+		_, err = db.Exec("DROP TABLE IF EXISTS tracks")
+		if err != nil {
+			panic(err)
+		}
+		_, err = db.Exec("DROP TABLE IF EXISTS playlist_tracks")
+		if err != nil {
+			panic(err)
+		}
 	})
 
 	usersPlaylist := []model.UserPlaylist{
