@@ -2,52 +2,32 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 
-	"github.com/ruang-guru/playground/backend/database/intro-to-sql/model"
+	_ "github.com/mattn/go-sqlite3"
+	"github.com/ruang-guru/playground/backend/database/intro-to-sql/helper"
 )
 
-type MovieRepository struct {
-	db *sql.DB
-}
-
-func NewMovieRepository(db *sql.DB) *MovieRepository {
-	return &MovieRepository{db}
-}
-
-func (r *MovieRepository) FetchMoviesDirector() ([]model.MovieDirector, error) {
-	var sqlStmt string
-
-	// Task: Fetch all movies and their director
-	// Hint: Use LEFT JOIN
-	// See model.MovieDirector for the structure of the result
-
-	// TODO: answer here
-
-	rows, err := r.db.Query(sqlStmt)
+func main() {
+	db, err := sql.Open("sqlite3", "../example.db")
 	if err != nil {
-		return nil, err
+		panic(err)
+	}
+	defer db.Close()
+
+	orderRepo := NewOrderRepository(db)
+
+	orderProducts, err := orderRepo.FetchOrderProducts()
+	if err != nil {
+		panic(err)
 	}
 
-	defer rows.Close()
-
-	var movies []model.MovieDirector
-
-	for rows.Next() {
-		var movie model.MovieDirector
-
-		err := rows.Scan(
-			&movie.ID,
-			&movie.Title,
-			&movie.Description,
-			&movie.Year,
-			&movie.DirectorName,
-		)
-		if err != nil {
-			return nil, err
-		}
-
-		movies = append(movies, movie)
+	for _, orderProduct := range orderProducts {
+		fmt.Printf("ID: %d, ProducID: %d, ProductName: %s, Quantity: %d, Price: %d, OrderDate: %s\n",
+			orderProduct.ID, orderProduct.ProductID, helper.DereferenceString(orderProduct.ProductName), orderProduct.Quantity, helper.DereferenceInt(orderProduct.ProductPrice), orderProduct.OrderDate)
 	}
+}
 
-	return movies, nil
+func NewOrderRepository(db *sql.DB) {
+	panic("unimplemented")
 }
