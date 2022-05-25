@@ -1,55 +1,49 @@
+// Sort array terlebih dahulu, kemudian rotasi ke kiri sesuai dengan nilai yang telah ditentukan.
+//
+// Contoh Sort array:
+// Input: [4,5,2,1,3]
+// Output: [1,2,3,4,5]
+
+//Contoh RotateLeft:
+//Input: 4, [1,2,3,4,5]
+//Output: [5,1,2,3,4]
+
+// Explanation RotateLeft:
+// untuk melakukan rotasi kiri dengan nilai 4, array mengalami urutan perubahan berikut:
+// [1,2,3,4,5] -> [2,3,4,5,1] -> [3,4,5,1,2] -> [4,5,1,2,3] -> [5,1,2,3,4]
+
 package main
 
-type EmployeeRow struct {
-	ID        int // primary key
-	Name      string
-	Position  string
-	Salary    int
-	ManagerID int // foreign key -> Employee
-}
-type EmployeeDB []EmployeeRow
+import (
+	"fmt"
+	"sort"
+)
 
-func NewEmployeeDB() *EmployeeDB {
-	return &EmployeeDB{}
+func main() {
+	var nums = []int{4, 5, 2, 1, 3}
+	arrSorted := Sort(nums)
+	fmt.Println(arrSorted)
+	rotateLeft := RotateLeft(2, arrSorted)
+	fmt.Println(rotateLeft)
 }
 
-func (db *EmployeeDB) Where(id int) *EmployeeRow {
-	for i := 0; i < len(*db); i++ {
-		if (*db)[i].ID == id {
-			return &(*db)[i]
-		}
+func Sort(arr []int) []int {
+	arrCopy := make([]int, len(arr))
+	copy(arrCopy, arr)
+	sort.Ints(arrCopy)
+	return arrCopy
+}
+
+func RotateLeft(d int, arr []int) []int {
+	if d < 1 || len(arr) < 1 {
+		return arr
 	}
-	return nil
-}
-
-func (db *EmployeeDB) Insert(name string, position string, salary int, managerID int) {
-	(*db) = append(*db, EmployeeRow{
-		ID:        len(*db) + 1,
-		Name:      name,
-		Position:  position,
-		Salary:    salary,
-		ManagerID: managerID,
-	})
-}
-
-func (db *EmployeeDB) Update(id int, name string, position string, salary int, managerID int) {
-	// search employee by id
-	employee := db.Where(id)
-
-	// assign new value to properties
-	employee.Name = name
-	employee.Position = position
-	employee.Salary = salary
-	employee.ManagerID = managerID
-}
-
-func (db *EmployeeDB) Delete(id int) {
-	// search employee by id
-	for i, employee := range *db {
-		if employee.ID == id {
-			// remove existing employee with specified id from table
-			*db = append((*db)[:i], (*db)[i+1:]...)
-			return
-		}
+	copyArr := make([]int, len(arr))
+	copy(copyArr, arr)
+	loop := d % len(arr)
+	for i := 0; i < loop; i++ {
+		first := copyArr[0]
+		copyArr = append(copyArr[1:], first)
 	}
+	return copyArr
 }
