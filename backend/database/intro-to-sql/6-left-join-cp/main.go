@@ -27,3 +27,7 @@ func main() {
 			orderProduct.ID, orderProduct.ProductID, helper.DereferenceString(orderProduct.ProductName), orderProduct.Quantity, helper.DereferenceInt(orderProduct.ProductPrice), orderProduct.OrderDate)
 	}
 }
+
+func NewOrderRepository(db *sql.DB) {
+	panic("unimplemented")
+}
