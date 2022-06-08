@@ -25,9 +25,7 @@ func Routes() *http.ServeMux {
 		// Task: JSON body diconvert menjadi creditial struct & return bad request ketika terjadi kesalahan decoding json:
 
 		// TODO: answer here
-		body := r.Body
-		defer r.Body.Close()
-		err := json.NewDecoder(body).Decode(&creds)
+		err := json.NewDecoder(r.Body).Decode(&creds)
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
 			return
@@ -36,8 +34,8 @@ func Routes() *http.ServeMux {
 		// Task: Ambil password dari username yang dipakai untuk login & return unauthorized jika password salah
 
 		// TODO: answer here
-		actualPassword := users[creds.Username]
-		if creds.Password != actualPassword {
+		expectedPassword, ok := users[creds.Username]
+		if !ok || creds.Password != expectedPassword {
 			w.WriteHeader(http.StatusUnauthorized)
 			return
 		}
@@ -47,11 +45,11 @@ func Routes() *http.ServeMux {
 		//      3. Expiry time menggunakan time millisecond
 
 		// TODO: answer here
-		expiryTime := time.Now().Add(30 * time.Minute)
-		claim := &Claims{
+		expirationTime := time.Now().Add(5 * time.Minute)
+		claims := &Claims{
 			Username: creds.Username,
 			StandardClaims: jwt.StandardClaims{
-				ExpiresAt: expiryTime.UnixMilli(),
+				ExpiresAt: expirationTime.Unix(),
 			},
 		}
 
@@ -60,8 +58,8 @@ func Routes() *http.ServeMux {
 		//      3. return internal error ketika ada kesalahan ketika pembuatan JWT string
 
 		// TODO: answer here
-		token := jwt.NewWithClaims(jwt.SigningMethodHS256, claim)
-		jwtStr, err := token.SignedString(jwtKey)
+		token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+		tokenString, err := token.SignedString(jwtKey)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
@@ -71,8 +69,9 @@ func Routes() *http.ServeMux {
 
 		// TODO: answer here
 		http.SetCookie(w, &http.Cookie{
-			Name:  jwtCookieKey,
-			Value: jwtStr,
+			Name:    "token",
+			Value:   tokenString,
+			Expires: expirationTime,
 		})
 	})
 
@@ -82,7 +81,7 @@ func Routes() *http.ServeMux {
 		//		 3. Buat return bad request ketika field token tidak ada
 
 		// TODO: answer here
-		tokenCookie, err := r.Cookie(jwtCookieKey)
+		cookie, err := r.Cookie("token")
 		if err != nil {
 			if err == http.ErrNoCookie {
 				w.WriteHeader(http.StatusUnauthorized)
@@ -95,24 +94,32 @@ func Routes() *http.ServeMux {
 		// Task: Ambil value dari cookie token
 
 		// TODO: answer here
-		tokenValue := tokenCookie.Value
+		tknStr := cookie.Value
 
 		// Task: Deklarasi variable claim
 
 		// TODO: answer here
-		claim := Claims{}
+		claims := &Claims{}
 
 		//Task: parse JWT token ke dalam claim
 
 		// TODO: answer here
-		token, _ := jwt.ParseWithClaims(tokenValue, &claim, func(t *jwt.Token) (interface{}, error) {
+		tkn, err := jwt.ParseWithClaims(tknStr, claims, func(token *jwt.Token) (interface{}, error) {
 			return jwtKey, nil
 		})
+		if err != nil {
+			if err == jwt.ErrSignatureInvalid {
+				w.WriteHeader(http.StatusUnauthorized)
+				return
+			}
+			w.WriteHeader(http.StatusBadRequest)
+			return
+		}
 
 		//Task: return unauthorized ketika token sudah tidak valid (biasanya karna token expired)
 
 		// TODO: answer here
-		if !token.Valid {
+		if !tkn.Valid {
 			w.WriteHeader(http.StatusUnauthorized)
 			return
 		}
@@ -120,8 +127,7 @@ func Routes() *http.ServeMux {
 		// Task: return data dalam claim, seperti username yang telah didefinisikan
 
 		// TODO: answer here
-		w.WriteHeader(http.StatusOK)
-		w.Write([]byte(fmt.Sprintf("Welcome %s!", claim.Username)))
+		w.Write([]byte(fmt.Sprintf("Welcome %s!", claims.Username)))
 	})
 
 	return mux
